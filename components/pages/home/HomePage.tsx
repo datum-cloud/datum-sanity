@@ -1,4 +1,8 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { Logo } from '@/components/global/Logo'
+import { Button } from '@/components/ui'
 
 import { HomePageAnimation } from './HomePage.animation'
 import { homeStyles } from './HomePage.styles'
@@ -20,12 +24,22 @@ export function HomePage() {
               hyper-scale, backed by open source.
             </h1>
           </div>
-          <div className={footer()}>Footer</div>
+          <div className={footer()}>
+            <Button variant="secondary" asChild>
+              <Link href="https://github.com/datumforge" target="_blank">
+                Get involved on GitHub{' '}
+                <Image
+                  src="/icons/github.svg"
+                  width={13}
+                  height={13}
+                  alt="Datum on GitHub"
+                />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
-      <div className={right()}>
-        <HomePageAnimation />
-      </div>
+      <div className={right()}>{/* <HomePageAnimation /> */}</div>
     </main>
   )
 }
