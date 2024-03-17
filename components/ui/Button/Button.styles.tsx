@@ -14,12 +14,13 @@ export const button = tv({
       ghost:
         'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50',
       link: 'text-slate-900 underline-offset-4 hover:underline dark:text-slate-50',
+      white: 'bg-white text-blackberry-800',
     },
     size: {
       default: 'h-14 px-7 text-lg',
       sm: 'h-9 rounded-md px-3',
       lg: 'h-11 rounded-md px-8',
-      icon: 'h-10 w-10',
+      icon: 'h-10 w-10 px-0 py-0',
     },
   },
   defaultVariants: {

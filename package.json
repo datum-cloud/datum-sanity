@@ -15,7 +15,9 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
     "@portabletext/react": "3.0.11",
+    "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@sanity/client": "6.15.1",
     "@sanity/demo": "2.0.0",
@@ -38,6 +40,7 @@
     "next-sanity": "8.1.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.51.0",
     "react-is": "18.2.0",
     "react-lite-youtube-embed": "2.4.0",
     "sanity": "3.31.0",
@@ -45,7 +48,8 @@
     "styled-components": "6.1.8",
     "tailwind-merge": "^2.2.1",
     "tailwind-variants": "^0.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "18.2.63",
@@ -55,8 +59,9 @@
     "eslint-plugin-simple-import-sort": "12.0.0",
     "postcss": "8.4.35",
     "prettier": "^3.2.5",
+    "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-packagejson": "2.4.12",
-    "prettier-plugin-tailwindcss": "^0.5.11",
+    "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
   }
