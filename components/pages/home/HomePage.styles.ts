@@ -16,9 +16,15 @@ const homeStyles = tv({
 
 const newsletterStyles = tv({
   slots: {
-    wrapper: 'relative mt-14 flex gap-5',
+    wrapper: 'relative mt-14 flex flex-col gap-5 md:flex-row',
     input: 'w-full h-12 md:h-auto',
-    button: 'absolute top-2 h-8 right-2 text-xs md:relative md:text-sm',
+    button:
+      'absolute top-2 h-8 right-2 text-xs md:relative md:text-sm md:top-0 md:h-14',
+    errorMessage: 'text-sunglow-900 mt-3',
+    success:
+      'mt-14 bg-white bg-opacity-20 p-5 rounded-md text-white flex gap-3 ',
+    successMessage: 'flex-1',
+    successIcon: 'mt-1',
   },
 })
 

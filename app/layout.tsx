@@ -2,6 +2,8 @@ import 'tailwindcss/tailwind.css'
 
 import { karelia } from '@/fonts/fonts'
 
+import { Providers } from './providers'
+
 export default async function RootLayout({
   children,
 }: {
@@ -9,7 +11,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className={`${karelia.variable}`}>
-      <body className="overscroll-none">{children}</body>
+      <body className="overscroll-none">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

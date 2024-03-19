@@ -40,25 +40,6 @@ export const HomePageAnimation = () => {
     Render.run(render)
     const runner = Runner.create()
     Runner.run(runner, engine)
-    // // create stairs
-    // let stairCount = (render.bounds.max.y - render.bounds.min.y) / 50
-
-    // let stack = Composites.stack(
-    //   0,
-    //   0,
-    //   stairCount + 2,
-    //   1,
-    //   0,
-    //   0,
-    //   function (x, y, column) {
-    //     return Bodies.rectangle(x - 50, y + column * 50, 100, 1000, {
-    //       isStatic: true,
-    //       render: {
-    //         fillStyle: '#ffffff',
-    //       },
-    //     })
-    //   },
-    // )
 
     // create obstacles
     const obstacles = Composites.stack(10, 0, 15, 3, 10, 10, function (x, y) {
@@ -127,32 +108,6 @@ export const HomePageAnimation = () => {
         // update last time
         lastTime = Common.now()
       }
-
-      //   for (var i = 0; i < stack.bodies.length; i += 1) {
-      //     var body = stack.bodies[i]
-
-      //     // animate stairs
-      //     Body.translate(body, {
-      //       x: -30 * timeScale,
-      //       y: -30 * timeScale,
-      //     })
-
-      //     // loop stairs when they go off screen
-      //     if (body.position.x < -50) {
-      //       Body.setPosition(body, {
-      //         x: 50 * (stack.bodies.length - 1),
-      //         y:
-      //           25 +
-      //           render.bounds.max.y +
-      //           (body.bounds.max.y - body.bounds.min.y) * 0.5,
-      //       })
-
-      //       Body.setVelocity(body, {
-      //         x: 0,
-      //         y: 0,
-      //       })
-      //     }
-      //   }
 
       for (let i = 0; i < obstacles.bodies.length; i += 1) {
         var body = obstacles.bodies[i],
