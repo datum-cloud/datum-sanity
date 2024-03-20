@@ -25,12 +25,12 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
-      - run: npm ci --ignore-scripts --only-dev
+      - run: bun ci --ignore-scripts --only-dev
       - uses: actions/cache@v4
         with:
           path: node_modules/.cache/prettier/.prettier-cache
           key: prettier-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.gitignore') }}
-      - run: npm run format
+      - run: bun run format
       - run: git restore .github/workflows
       - uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2
         id: generate-token
@@ -40,7 +40,7 @@ jobs:
       - uses: peter-evans/create-pull-request@a4f52f8033a6168103c2538976c07b467e8163bc # v6
         with:
           author: github-actions <41898282+github-actions[bot]@users.noreply.github.com>
-          body: I ran `npm run format` 🧑‍💻
+          body: I ran `bun run format` 🧑‍💻
           branch: actions/prettier-if-needed
           commit-message: 'chore(prettier): 🤖 ✨'
           labels: 🤖 bot
