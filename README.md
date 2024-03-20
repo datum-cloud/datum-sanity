@@ -6,4 +6,4 @@ This starter was originally preconfigured to support Visual Editing, a new featu
 
 ## Getting Started
 
-Run `bun install`
+Run `bun install` and `bun run dev`
