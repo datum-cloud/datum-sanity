@@ -15,6 +15,9 @@ If you're using nvm, you need to run the following inside the repository:
 nvm install
 ```
 
-## Getting Started
+## Get started
 
-Run `bun install` and `bun run dev`
+```bash
+bun install
+bun run dev
+```
