@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v1
         with:
           cache: npm
           node-version: lts/*
-      - run: npm ci
-      - run: npm run type-check
-      - run: npm run lint -- --max-warnings 0
+      - run: bun install
+      - run: bun run type-check
+      - run: bun run lint -- --max-warnings 0
